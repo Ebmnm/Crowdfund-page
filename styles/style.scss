@@ -1,0 +1,478 @@
+*,*::after,*::before {
+    box-sizing: border-box;
+}
+
+$cyan: hsl(176, 50%, 47%);
+$darkcyan:  hsl(176, 72%, 28%);
+
+
+
+body{
+    background-color: hsl(0, 0%, 90%);
+    font-family: 'Commissioner', sans-serif;
+    margin: 0;
+}
+ 
+p {
+    color:hsl(0, 0%, 48%)
+}
+span {
+    font-style: bold;
+    font-size: 2em;
+    font-weight: 600;
+}
+
+.button {
+    color:white;
+    background-color: $cyan ;
+    padding: 1.1rem 1rem;
+    border-radius: 1.8rem;
+    border: none;
+    font-weight: 400;
+    font-size: 1.2em;
+    height: fit-content;
+    width: fit-content;
+}
+.button:hover {
+                 background-color: hsl(176, 72%, 28%);
+                transition: .3;
+                cursor: pointer;
+}
+.bookmark-button{
+    color:black;
+    background-color: hsla(0, 0%, 48%, 0.4);
+    padding:0 2rem;
+    border-radius:  1.9rem; 
+    border: none;
+    font-weight: 400;
+    font-size: 1.2em;
+    height: 54px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: fit-content;
+    position: relative;
+    padding-left: 0%;
+    
+    p{
+        padding:0 10%;
+    }
+}
+
+nav {
+width:100%;
+height: 41vh;
+background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.2)),url(/crowdfunding-product-page-main/images/image-hero-desktop.jpg);
+color:white;
+display: flex;
+align-items: flex-start;
+padding:3%;
+justify-content: space-between;
+
+
+}
+
+.links {
+    display: flex;
+    flex-direction: row;
+    padding-right: 20%;
+   
+
+    h3 {
+        padding-right:20%;
+        white-space: nowrap;
+        
+    }
+    h3:hover{
+        color: $cyan;
+        transform: scale(1.1);
+        transition: .2s;
+        cursor: pointer;
+    }
+}
+
+.section-one {
+    margin: auto;
+    background-color: white;
+    width: 60%;
+    display: flex;
+    flex-direction: column;
+   text-align: center;
+   justify-content: center;
+   position: relative;
+   border-radius: 1em;
+   bottom:100px;
+        .img-wrap {
+            width: 50px;
+            height:50px;
+           position: absolute;
+           top:-25px;
+           left:45%;
+        
+            img{
+                size: contain 
+            }
+        }
+
+        h1 {
+            padding-top:5%;
+        }
+        .bottom-buttons{
+            display:flex;
+            flex-direction: row;
+            justify-content: space-evenly;
+            padding: 5% 0;
+        }
+
+        .bookmark-button {
+            display: flex;
+            flex-direction: row;
+            
+        }
+        .bookmark-button:hover{
+           opacity: .8;
+           transition: .3;
+           cursor: pointer;
+        }
+
+}
+
+.main-color{
+ background-color:rgb(20, 161, 7);
+    color:white;
+}
+
+.section-two {
+    margin: auto;
+    background-color: white;
+    width: 60%;
+    display: flex;
+    flex-direction: column;
+   text-align: center;
+   justify-content: center;
+   position: relative;
+   border-radius: 1em;
+   bottom:80px;
+
+
+   .num-wrap {
+       display: flex;
+       flex-direction: row;
+       justify-content: space-evenly;
+       padding: 50px;
+   }
+
+   .num-component:nth-child(2) {
+    border-left:2px solid rgb(180, 169, 169);
+    border-right: 2px solid rgb(180, 169, 169);
+    
+   }
+   .num-component {
+       flex:1;
+   }
+
+   hr {
+       width:80%;
+       height:20px;
+       margin-bottom: 40px;
+   }
+}
+
+.section-three {
+    margin: auto;
+    background-color: white;
+    width: 60%;
+    display: flex;
+    flex-direction: column;
+   justify-content: center;
+   position: relative;
+   border-radius: 1em;
+   padding:3em;
+   line-height: 2em;
+   bottom:50px;
+
+
+   .pledge {
+       border: hsla(0, 0%, 48%, 0.4) 1px solid;
+       border-radius: 1em;
+       padding:2em;
+       display: flex;
+       flex-direction: column;
+       margin-bottom:5%;
+
+       h3:nth-of-type(2){
+           color: $cyan;
+           font-size: 1rem;
+       }
+   }
+   .pledge-nav{
+       display: flex;
+       flex-direction: row;
+       justify-content: space-between;
+   }
+   .pledge-bottom{
+       display: flex;
+       flex-direction: row;
+       align-items: center;
+   }
+
+   .button {
+       position: absolute;
+       right:10%;
+   }
+   span{
+       margin-right:20px;
+   }
+}
+
+
+
+.pledge-popup {
+    display: block;
+    position: fixed;
+    top: 10vh;
+    left: 15%;
+    height: 80vh;
+    margin: 0;
+    padding: 3rem 1.5rem;
+    overflow-y: scroll;
+    outline: none;
+    border: none;
+    box-shadow: 0 0 3rem rgba(0, 0, 0, 0.5);
+    opacity: 0;
+    transform: scale(0.95);
+    pointer-events: none;
+    transition-property: opacity, transform;
+    transition-duration: 0.5s;
+    transition-timing-function: ease;
+    z-index: 3;
+    background-color: white;
+    width: 70%;
+
+
+
+
+.close-popup {
+    float: right;
+   border: 1px black solid;
+   padding:.5em;
+   
+}
+.close-popup:hover{
+    background-color: red;
+}
+   
+input[type=radio] {
+    width: 2em;
+    height: 1.6em;
+}
+
+
+
+h3 {
+    display: flex;
+  align-items: center;
+}
+
+
+
+   .pledge-popup-card {
+    border: hsla(0, 0%, 48%, 0.4) 1px solid;
+    border-radius: 1em;
+    padding:2em;
+    display: flex;
+    flex-direction: column;
+    margin-bottom:5%; 
+    
+    
+   }
+
+   .enterPledge{
+       display: flex;
+       flex-direction: row;
+       align-items: center;
+       justify-content: space-between;
+       padding-top: 5%;
+       animation: fadeInFromNone 0.5s ease-out; ;
+
+       @keyframes fadeInFromNone {
+        0% {
+            display: none;
+            opacity: 0;
+        }
+    
+        1% {
+            display: block;
+            opacity: 0;
+        }
+    
+        100% {
+            display: block;
+            opacity: 1;
+        }
+    }
+       .continuebutton{
+        color:white;
+        background-color: $cyan ;
+        padding: 1.1rem 1rem;
+        border-radius: 1.8rem;
+        border: none;
+        font-weight: 400;
+        font-size: 1.2em;
+        height: fit-content;
+        width: fit-content;
+       }
+       .continuebutton:hover{
+           background-color: $darkcyan;
+       }
+
+       .amountInput{
+       border: 1px $darkcyan solid;
+        padding: 1.1rem 1rem;
+        border-radius: 1.8rem;
+        font-weight: 400;
+        font-size: 1.2em;
+        height: fit-content;
+        width: fit-content;
+        outline:none;
+       }
+
+       .error{
+           border: 1px red solid;
+       }
+   }
+   .popup-nav {
+       display: flex;
+       flex-direction: row;
+        justify-content: space-between;
+
+        span {
+            display: flex;
+            flex-direction: row;
+            align-self: center;
+            align-items: center;
+
+            p{
+                padding-left: 20%;
+                font-size: .7em;
+            }
+        }
+
+        h3:nth-of-type(2){
+            color: $cyan;
+            font-size: 1em;
+        }
+   }
+}
+
+
+
+  .closer{
+    position: fixed;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    content: ' ';
+    background: rgba(0,0,0,.5);
+  }
+
+  .changeborder{
+    border: 2px solid $cyan !important;
+}
+.changefontcyan {
+    color: $cyan;
+}
+
+.meter {
+    box-sizing: content-box;
+    height: 20px; /* Can be anything */
+    position: relative;
+    margin: auto; /* Just for demo spacing */
+    margin-bottom: 5%;
+    background: #555;
+    border-radius: 25px;
+    padding: 10px;
+    box-shadow: inset 0 -1px 1px rgba(255, 255, 255, 0.3);
+    width:75%;
+    
+   
+  }
+
+  .meter > span {
+    display: block;
+    height: 100%;
+    border-top-right-radius: 8px;
+    border-bottom-right-radius: 8px;
+    border-top-left-radius: 20px;
+    border-bottom-left-radius: 20px;
+    background-color: rgb(33, 218, 231);
+    background-image: linear-gradient(
+      center bottom,
+      rgb(43, 194, 83) 37%,
+      rgb(84, 240, 84) 69%
+    );
+  }
+
+  .thanks-popup {
+    display: block;
+    position: fixed;
+    top: 20vh;
+    left: 31%;
+    height: 50vh;
+    margin: 0;
+    padding: 2rem;
+    outline: none;
+    border: none;
+    box-shadow: 0 0 3rem rgba(0, 0, 0, 0.5);
+    opacity: 0;
+    transform: scale(0.95);
+    pointer-events: none;
+    transition-property: opacity, transform;
+    transition-duration: 0.5s;
+    transition-timing-function: ease;
+    z-index: 3;
+    background-color: white;
+    width: 40%;
+  }
+  .active {
+    pointer-events: all;
+    opacity: 1;
+    transform: scale(1);
+  }
+
+  .thanks-content {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+      height: 90%;
+      
+      button {
+          margin:auto 0;
+          color:white;
+          background-color: $cyan ;
+          padding: 1.1rem 1rem;
+          border-radius: 1.8rem;
+          border: none;
+          font-weight: 400;
+          font-size: 1.2em;
+          height: fit-content;
+          width: fit-content;
+      }
+      button:hover {
+          background-color: $darkcyan;
+      }
+  }
+  
+
+
+html {
+    scroll-behavior: smooth !important;
+}
+
+@media (max-width:750px){
+ nav{
+   background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.2)),url()
+ }
+}
