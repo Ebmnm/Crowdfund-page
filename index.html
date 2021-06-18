@@ -26,6 +26,13 @@
     <h3>Discover</h3>
     <h3>Get Started</h3>
   </div>
+
+  <img class="mobile-burger" src="/images/icon-hamburger.svg" alt="">
+  <div class="mobile-links">
+    <h3>About</h3>
+    <h3>Discover</h3>
+    <h3>Get Started</h3>
+  </div>
 </nav>
 
 <section class="section-one">
@@ -39,8 +46,8 @@
     <button class="button">Back this project</button>
     <div class="bookmark-wrap">
     <button class="bookmark-button"> 
-      <div class="cirle">
-        <img  src="crowdfunding-product-page-main/images/icon-bookmark.svg" alt="">
+      <div class="circle">
+        <img id="bookmark-img" src="crowdfunding-product-page-main/images/icon-bookmark.svg" alt="">
             </div>
         <p id="bookmark">   Bookmark </p>
     </button> 
@@ -128,8 +135,8 @@
  </section>
 
   <!-- Selection modal start -->
-
-
+  <div class="outside"></div>
+ 
  <section class="pledge-popup">
   
     <img class="close-popup" src="crowdfunding-product-page-main/images/icon-close-modal.svg" alt="">
@@ -156,7 +163,7 @@
           You get an ergonomic stand made of natural bamboo. You've helped us launch our promotional campaign, and
           you’ll be added to a special Backer member list.
      </p>
-      
+     <span class="mobile-pledge-left" id="bamboo-left">101 <p class="details">left</p> </span>
       </div>
   
     <div id="black-card" class="pledge-popup-card">
@@ -169,7 +176,7 @@
           You get a Black Special Edition computer stand and a personal thank you. You’ll be added to our Backer
           member list. Shipping is included.
        </p>
-     
+       <span class="mobile-pledge-left" id="black-left"> 64 <p class="details">left</p></span> 
        </div>
     
      <div id="mahogany-card" class="pledge-popup-card">
@@ -182,7 +189,7 @@
           You get two Special Edition Mahogany stands, a Backer T-Shirt, and a personal thank you. You’ll be added
           to our Backer member list. Shipping is included.
         </p>
-       
+        <span class="mobile-pledge-left" id="mahogany-left"> 2 <p class="details">left</p> </span> 
      </div>
 
 

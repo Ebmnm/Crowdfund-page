@@ -17,10 +17,21 @@ let bambooCard = document.querySelector("#bamboo-card")
 let blackCard = document.querySelector("#black-card")
 let mahoganyCard = document.querySelector("#mahogany-card")
 let noRewardCard = document.querySelector(".pledge-popup-card")
+let hamberger = document.querySelector(".mobile-burger")
+let mobileLinks = document.querySelector(".mobile-links")
+let bookmarkImage = document.querySelector("#bookmark-img")
+let outside = document.querySelector(".outside")
+
+hamberger.addEventListener("click", () => {
+    mobileLinks.classList.toggle("show")
+   
+})
+
 
      bookmark.addEventListener("click", () => {
          bookmark.classList.toggle("main-color")
          bookTag.classList.toggle("main-color")
+        bookmarkImage.classList.toggle("bookmark-border")
      })
 
 
@@ -52,13 +63,20 @@ let noRewardCard = document.querySelector(".pledge-popup-card")
      for(let i = 0; i < buttons.length; i++){
 buttons[i].addEventListener("click", () => {
 popup.classList.add("active")
+outside.classList.add("active")
+})
 closebutton.addEventListener("click", () => {
     popup.classList.remove("active")
-})
+    outside.classList.remove("active")
+} )
 
-
-})
 }
+
+outside.addEventListener("click", () => {
+    popup.classList.remove("active")
+    outside.classList.remove("active")
+    thankYouCard.classList.remove("active")
+})
 
 
 inputTitle.forEach(title => {
@@ -293,6 +311,7 @@ thankYouCard.classList.add("active")
 let gotItButton = document.querySelector(".gotit")
 gotItButton.addEventListener("click", () => {
     thankYouCard.classList.remove("active")
+    outside.classList.remove("active")
 })
 
 

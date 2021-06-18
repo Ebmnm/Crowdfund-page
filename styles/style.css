@@ -582,6 +582,21 @@ nav {
   width: 40%;
 }
 
+.outside {
+  opacity: 0;
+  position: fixed;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  content: ' ';
+  background: rgba(0, 0, 0, 0.5);
+  pointer-events: none;
+  z-index: 1;
+  width: 100%;
+  height: 100%;
+}
+
 .active {
   pointer-events: all;
   opacity: 1;
@@ -631,10 +646,185 @@ html {
   scroll-behavior: smooth !important;
 }
 
+.mobile-burger {
+  position: absolute;
+  opacity: 0;
+  pointer-events: none;
+}
+
+.mobile-links {
+  position: absolute;
+  opacity: 0;
+  pointer-events: none;
+}
+
+.mobile-pledge-left {
+  display: none;
+}
+
 @media (max-width: 750px) {
   nav {
-    background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.5)), to(rgba(0, 0, 0, 0.2))), url();
-    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.2)), url();
+    background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.5)), to(rgba(0, 0, 0, 0.2))), url(https://ebmnm.github.io/Crowdfund-page/crowdfunding-product-page-main/images/image-hero-mobile.jpg);
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.2)), url(https://ebmnm.github.io/Crowdfund-page/crowdfunding-product-page-main/images/image-hero-mobile.jpg);
+    background-size: cover;
+  }
+  .mobile-pledge-left {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+  .bookmark-border {
+    border: #3cb4ac 5px solid;
+    border-radius: 50%;
+  }
+  .links {
+    opacity: 0;
+    position: absolute;
+  }
+  .mobile-burger {
+    opacity: 1;
+    position: relative;
+    margin-right: 5%;
+    margin-top: 2%;
+    pointer-events: all;
+  }
+  .mobile-links {
+    position: absolute;
+    opacity: 0;
+    right: 15%;
+    background-color: white;
+    color: black;
+    padding: 4%;
+    z-index: 5;
+    cursor: pointer;
+    text-align: center;
+  }
+  .mobile-links h3:nth-of-type(2) {
+    width: 100%;
+    padding: 15px;
+    border-top: 2px solid grey;
+    border-bottom: 2px solid grey;
+  }
+  .show {
+    -webkit-transition: 1s;
+    transition: 1s;
+    opacity: 1;
+    pointer-events: all;
+  }
+  .section-one {
+    padding: 5%;
+    width: 85%;
+  }
+  .bottom-buttons {
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    width: 100%;
+  }
+  .bottom-buttons p {
+    display: none;
+  }
+  .bottom-buttons .bookmark-wrap {
+    width: -webkit-fit-content;
+    width: -moz-fit-content;
+    width: fit-content;
+  }
+  .bottom-buttons .bookmark-wrap .circle {
+    background-color: white;
+    padding: 8%;
+    border-radius: 45%;
+  }
+  .bottom-buttons .bookmark-button {
+    background-color: white;
+    padding: 0;
+  }
+  .section-two {
+    width: 85%;
+  }
+  .section-two .num-wrap {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .section-two .num-component:nth-child(2) {
+    width: -webkit-min-content;
+    width: -moz-min-content;
+    width: min-content;
+    border: none;
+    border-top: 2px #c7c7c7 solid;
+    border-bottom: 2px #c7c7c7 solid;
+  }
+  .section-three {
+    width: 85%;
+  }
+  .section-three h3 {
+    padding: 5%;
+  }
+  .section-three .pledge-bottom {
+    position: relative;
+    margin-bottom: 40%;
+  }
+  .section-three .pledge-bottom button {
+    position: absolute;
+    left: 10%;
+    margin-top: 20%;
+  }
+  .pledge-popup {
+    width: 92%;
+    left: 3%;
+  }
+  .pledge-popup div:nth-last-child(1) {
+    margin-top: 20px;
+  }
+  .pledge-popup .enterPledge {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    gap: 15px;
+  }
+  .pledge-popup .enterPledge .amountInput {
+    width: 80%;
+  }
+  .pledge-popup span {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    gap: 10px;
+  }
+  .pledge-popup .popup-nav {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .pledge-popup .popup-nav span {
+    display: none;
+  }
+  .thanks-popup {
+    width: 92%;
+    left: 3%;
+    text-align: center;
   }
 }
 /*# sourceMappingURL=style.css.map */
