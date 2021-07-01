@@ -5,12 +5,21 @@
 $cyan: hsl(176, 50%, 47%);
 $darkcyan:  hsl(176, 72%, 28%);
 
+html {
+    width: 100vw;
+    height: auto;
+  
+
+}
 
 
 body{
     background-color: hsl(0, 0%, 90%);
     font-family: 'Commissioner', sans-serif;
     margin: 0;
+    width: 100vw;
+    height: auto;
+  
 }
  
 p {

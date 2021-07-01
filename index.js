@@ -22,6 +22,8 @@ let mobileLinks = document.querySelector(".mobile-links")
 let bookmarkImage = document.querySelector("#bookmark-img")
 let outside = document.querySelector(".outside")
 
+
+
 hamberger.addEventListener("click", () => {
     mobileLinks.classList.toggle("show")
    
@@ -186,6 +188,7 @@ function updatePledge() {
          return
         } else {
         bamboo.innerHTML = bambooNum - 1
+       
         }
      }
      
