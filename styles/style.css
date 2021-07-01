@@ -787,7 +787,7 @@ html {
     margin-top: 20%;
   }
   .pledge-popup {
-    width: 92%;
+    width: 80%;
     left: 3%;
   }
   .pledge-popup div:nth-last-child(1) {
@@ -829,7 +829,7 @@ html {
     display: none;
   }
   .thanks-popup {
-    width: 92%;
+    width: 78%;
     left: 3%;
     text-align: center;
   }

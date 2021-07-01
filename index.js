@@ -22,8 +22,9 @@ let mobileLinks = document.querySelector(".mobile-links")
 let bookmarkImage = document.querySelector("#bookmark-img")
 let outside = document.querySelector(".outside")
 
-
-
+let bamboo2 = document.querySelectorAll(".bamboo-left")
+let black2 = document.querySelectorAll(".black-left")
+let mahogany2 = document.querySelectorAll(".mahogany-left")
 hamberger.addEventListener("click", () => {
     mobileLinks.classList.toggle("show")
    
@@ -188,8 +189,9 @@ function updatePledge() {
          return
         } else {
         bamboo.innerHTML = bambooNum - 1
-       
+        bamboo2.forEach(bamboo2 => bamboo2.innerHTML = bamboo.innerHTML)
         }
+        
      }
      
      if (radioInputs[2].checked == true) {
@@ -198,6 +200,7 @@ function updatePledge() {
           return
          } else {
          black.innerHTML = blackNum - 1
+         black2.forEach(black2 => black2.innerHTML = black.innerHTML)
          }
       }
      
@@ -207,6 +210,7 @@ function updatePledge() {
           return
          } else {
          mahogany.innerHTML = mahoganyNum - 1
+         mahogany2.forEach(mahogany2 => mahogany2.innerHTML = mahogany.innerHTML)
          }
       }
     }
