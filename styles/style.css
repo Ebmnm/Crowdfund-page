@@ -805,6 +805,7 @@ html {
   }
   .pledge-popup .enterPledge .amountInput {
     width: 80%;
+    font-size: 1.1em !important;
   }
   .pledge-popup span {
     display: -webkit-box;
